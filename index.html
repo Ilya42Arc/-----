@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film catalog</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
    <div class="container">
@@ -13,6 +13,13 @@
                 <span class="arc">ARC</span><span class="movie">movie</span>
             </h1>
         </header>
+        <div class="genre-filter">
+             <button class="genre-toggle">Жанры</button>
+             <div class="genre-dropdown">
+                <button class="genre-btn active" data-genre="all">Все</button>
+                <!-- Остальные жанры будут добавлены сюда через JS -->
+             </div>
+        </div>
          <section class="movie-strip">
             <button class="carousel-btn prev-btn">&#10094;</button>
             <div class="movie-carousel">
@@ -42,22 +49,39 @@
         <div class="movie-detail">
             <button class="back-btn">← Назад к каталогу</button>
             <div class="movie-header">
-                <img src="" alt="Постер фильма" class="movie-detail-poster">
+
+                <!-- Левая колонка: постер + жанры -->
+                <div class="left-column">
+
+                    <img src="" alt="Постер фильма" class="movie-detail-poster">
+
+                    <div class="genres-section">
+                        <h3 class="genres-title">Жанры</h3>
+                        <div class="genres-list">
+                            <!-- Жанры будут добавлены через JavaScript -->
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Правая колонка -->
                 <div class="movie-info">
                     <h2 class="movie-detail-title"></h2>
                     <p class="movie-description"></p>
-                    
-                    <!-- Секция с трейлером -->
+
                     <div class="trailer-section">
                         <h3 class="trailer-title">Трейлер</h3>
+
+                        <div class="quality-selector">
+                            <!-- сюда JS вставит кнопки качеств -->
+                        </div>
+
                         <div class="trailer-container">
-                            <iframe src="https://rutube.ru/video/27c335dcbef386ff6adfd3fb392465c0/?r=wd"
-                            frameborder="0"
-                            allowfullscreen></iframe>
                             <!-- Трейлер будет добавлен через JavaScript -->
                         </div>
                     </div>
                 </div>
+
             </div>
             <div class="cast-section">
                 <h3 class="cast-title">Актерский состав</h3>
@@ -68,6 +92,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>
